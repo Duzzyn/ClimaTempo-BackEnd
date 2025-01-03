@@ -8,6 +8,10 @@ const port = 3000;
 
 app.use(cors())
 
+app.get("/", async (req, res) => {
+    res.send("Hello, World!")
+})
+
 app.get("/weather", async (req, res) => {
     const { city } = req.query
     const apiKey = process.env.KEY
